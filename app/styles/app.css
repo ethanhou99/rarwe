@@ -6,21 +6,23 @@ a{
 .rr-container {
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
+  width: 90%;
 }
 
 .rr-container::after {
   clear: both;
 }
 
-@media screen and (min-width:100em) and (max-width: 100em){
+@media screen and (min-width:60em) and (max-width: 100em) {
   .rr-container {
     width: 80%;
   }
 }
 
-@media screen and .rr-container {
-  width: 50%; }
+@media screen and (min-width: 100em) {
+  .rr-container {
+  width: 50%;
+  }
 }
 
 .rr-page-header {
@@ -28,15 +30,18 @@ a{
   margin: 40px 0 20px;
   border-bottom: 1px solid;
 }
+
 .rr-page-header > .rr-app-title {
   margin-top: 0;
   margin-bottom: 0;
 }
 
-.rr-app-title > .rr-subtitle { font-weight: normal;
+.rr-app-title > .rr-subtitle {
+  font-weight: normal;
 }
 
-.list > li { margin-bottom: 10px;
+.list > li {
+  margin-bottom: 10px;
 }
 
 :root {
@@ -44,21 +49,32 @@ a{
   --navitem-link-color: var(--bright-yellow);
 }
 
-.rr-navbar > .rr-nav { display: flex;
+.rr-navbar {
+  position: relative;
+  min-height: 50px;
+  border: 1px solid transparent;
+}
+
+.rr-navbar > .rr-nav {
+  display: flex;
   margin: 0;
-  padding: 0; list-style-type: none;
+  padding: 0;
+  list-style-type: none;
 }
 
-.rr-navbar-item { padding: 5px;
+.rr-navbar-item {
+  padding: 5px;
 }
 
-.rr-navbar-item > {
-border-bottom: 2px solid var(--navitem-link-color);
+.rr-navbar-item > a:hover {
+  border-bottom: 2px solid var(--navitem-link-color);
 }
 
 .rr-navbar-item > a.active {
   color: inherit;
   border-bottom: 2px solid var(--navitem-link-color);
 }
-.rr-navbar-item + .rr-navbar-item { margin-left: 10px;
+
+.rr-navbar-item + .rr-navbar-item {
+  margin-left: 10px;
 }
